@@ -43,6 +43,7 @@ def proposal_layer(rpn_cls_prob_reshape, rpn_bbox_pred, im_info, cfg_key, _feat_
 
     """
     # cfg_key=cfg_key.decode('ascii')
+    cfg_key = cfg_key.decode("utf-8")
     _anchors = generate_anchors(scales=np.array(anchor_scales))#生成基本的9个anchor
     _num_anchors = _anchors.shape[0]#9个anchor
 
